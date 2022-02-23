@@ -1,0 +1,31 @@
+.nav {
+  background: white;
+  opacity: 0.7;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem calc((100vw - 900px) / 2) 1rem calc((100vw - 1000px) / 2);
+};
+
+.navlink {
+  color: $dark-grey;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+    color: #2e0083;
+  }
+};
+
+.navmenu{
+  display: flex;
+  align-items: center;
+  margin-right: -24px;
+  @media screen and (max-width: 825px) {
+    display: none;
+  }
+}
+

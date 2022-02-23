@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    margin-top: 0;
+}
+
+body {
+    background: url('/Images/background.jpg');
+    background-size:unset;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: $m-size;
+    line-height: 1.6;
+}
+

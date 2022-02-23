@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './styles/styles.scss';
+import AppRouter from './routers/AppRouter';
+import { Provider } from 'react-redux';
+import Loading from './components/Loading';
+import configureStore from './store/configureStore';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const store = configureStore();
+const jsx = (
+    <Provider store={store}>
+        <AppRouter />
+    </Provider>
 );
+let hasRendered = false;
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById('root'));
+    hasRendered = true;
+  }
+};
+ReactDOM.render(<Loading />, document.getElementById('root'));
+renderApp();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
