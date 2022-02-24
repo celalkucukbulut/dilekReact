@@ -24,8 +24,65 @@
   display: flex;
   align-items: center;
   margin-right: -24px;
-  @media screen and (max-width: 825px) {
+  @media screen and (max-width: 850px) {
     display: none;
   }
 }
+
+.navburger{
+    display: none;
+    position: relative;
+    @media screen and (max-width: 850px) {
+        display: flex;
+      }
+}
+
+
+/*#region Navburger*/
+
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 20px;
+    top: 15px;
+  }
+  
+   .bm-burger-bars {
+     background: $grey;
+   }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #000000;
+  }
+  
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    display: block;
+
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: rgb(0, 0, 0);
+    padding: 3.5rem 0 0;
+    font-size: 1.15em;
+    margin: 45px 0 0 0;
+  }
+  
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #ffffff;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+  
+/*#endregion RegionName*/
 
