@@ -27,8 +27,9 @@ const Fanila = () => {
   quasi aliquam eligendi, placeat qui corporis!`;
     return (
         <div className='page'>
-            <Title className="header" headerText="KASTAMONU FANİLASI"></Title>
-            <Text subtitle={subtitle1} text={text1}></Text>
+            <div className='content'>
+                <Text subtitle={subtitle1} text={text1}></Text>
+            </div>
         </div>
     )
 };

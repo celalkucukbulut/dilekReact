@@ -2,8 +2,9 @@
 @import "../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 @import './base/settings';
 @import './base/base';
-@import './base/img';
 @import './components/loader';
 @import './components/navbar';
 @import './components/title';
 @import './components/text';
+@import './components/product.scss';
+@import './components/productImage.scss';

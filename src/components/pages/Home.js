@@ -1,9 +1,9 @@
 import React from 'react'
-import Slider from './Slider'
+import Slider from '../Slider'
 import Text from '../Text';
 const Home = () => {
-  const subtitle1="DENEME BAŞLIK";
-  const text1=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+    const subtitle1 = "DENEME BAŞLIK";
+    const text1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
   molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
   numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
   optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
@@ -25,13 +25,16 @@ const Home = () => {
   totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
   quasi aliquam eligendi, placeat qui corporis!`;
 
-  return (
-  <div className='page'>
-    <Slider></Slider>
-    <Text subtitle={subtitle1} text={text1}></Text>
-    <Text subtitle={subtitle1} text={text1}></Text>
-  </div>
-)};
+    return (
+        <div className='page'>
+            <Slider></Slider>
+            <div className='content'>
+                <Text subtitle={subtitle1} text={text1}></Text>
+                <Text subtitle={subtitle1} text={text1}></Text>
+            </div>
+        </div>
+    )
+};
 
 
 export default Home;

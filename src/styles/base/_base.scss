@@ -9,7 +9,7 @@ html{
 
 body {
     background: url('/Images/background.jpg');
-    background-size:unset;
+    background-size:cover;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: $m-size;
     line-height: 1.6;
@@ -18,4 +18,11 @@ body {
 .page {
     padding: 0rem calc((100vw - 900px) / 2);
     margin : 2rem;
+}
+.content{
+    background-color: white;
+    opacity: 0.65;
+    border-radius: 1%;
+    padding: 2rem;
+    margin-top: 1rem;
 }
