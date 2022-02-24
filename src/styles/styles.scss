@@ -1,10 +1,9 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../../node_modules/react-slideshow-image/dist/styles.css';
+@import "../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 @import './base/settings';
 @import './base/base';
 @import './base/img';
 @import './components/loader';
 @import './components/navbar';
-@import './components/home';
-@import './components/slider';
-@import './components/_title';
+@import './components/title';
+@import './components/text';

@@ -1,33 +1,39 @@
 import React from 'react';
-import { Slide} from 'react-slideshow-image';
+import ImageGallery from 'react-image-gallery';
 
 import allColors from '../../Images/allColors.jpg';
 import kart from '../../Images/Kart.PNG';
 import shopInside from '../../Images/ShopInside-3.jpg';
 import nasrullah from '../../Images/Nasrullah.jpg';
 
-const Slider = () => {
+const images = [
+    {
+        original: allColors,
+        originalHeight: 300,
+    },
+    {
+        original: kart,
+        originalHeight: 300,
+    },
+    {
+        original: shopInside,
+        originalHeight: 300,
+    },
+    {
+        original: nasrullah,
+        originalHeight: 300,
+    },
+];
+
+
+const Slider = () => {    
     return (
-        <div>
-            <Slide easing="ease">
-                <div className="each-slide">
-                    <div style={{ 'backgroundImage': `url(${allColors})` }}>
-                    </div>
-                </div>
-                <div className="each-slide">
-                    <div style={{ 'backgroundImage': `url(${kart})` }}>
-                    </div>
-                </div>
-                <div className="each-slide">
-                    <div style={{ 'backgroundImage': `url(${shopInside})` }}>
-                    </div>
-                </div>
-                <div className="each-slide">
-                    <div style={{ 'backgroundImage': `url(${nasrullah})` }}>
-                    </div>
-                </div>
-            </Slide>
-        </div>
+        <ImageGallery
+            showPlayButton={false}
+            showFullscreenButton={false}
+            slideDuration={450}
+            slideInterval={2500}
+            items={images} />
     )
 };
 

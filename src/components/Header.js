@@ -8,19 +8,19 @@ const Header = () => {
                 <img src={require('../Images/logo.png')} alt='logo' />
             </NavLink>
             <div className='navmenu'>
-                <NavLink className="navlink" to='/Home' activeStyle>
+                <NavLink className="navlink" to='/Home' activestyle="true">
                     ANASAYFA
                 </NavLink>
-                <NavLink className="navlink" to='/AboutUs' activeStyle>
+                <NavLink className="navlink" to='/AboutUs' activestyle="true">
                     HAKKIMIZDA
                 </NavLink>
-                <NavLink className="navlink" to='/Fanila' activeStyle>
+                <NavLink className="navlink" to='/Fanila' activestyle="true">
                     KASTAMONU FANİLASI
                 </NavLink>
-                <NavLink className="navlink" to='/Products' activeStyle>
+                <NavLink className="navlink" to='/Products' activestyle="true">
                     ÜRÜNLERİMİZ
                 </NavLink>
-                <NavLink className="navlink" to='/ContactUs' activeStyle>
+                <NavLink className="navlink" to='/ContactUs' activestyle="true">
                     İLETİŞİM
                 </NavLink>
             </div>
