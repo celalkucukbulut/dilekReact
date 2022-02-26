@@ -13,24 +13,28 @@
 }
 
 .productImageLabel{
-    background-color: rgba(255, 255, 255, 0.75);
     color: $dark-grey;
+    font-weight: bold;
+    font-size: small;
 }
 
 .dialogProduct{
     position: fixed;
-    cursor: pointer;
-    width: 40vw;
-    left: 2%;
     top: 5%;
+    left: 0;
+    width: 40vw;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
     @media screen and (max-width: 850px) {
         width: 70vw;
     }
     @media screen and (max-width: 500px) {
         height: 90vw;
-        top: 10%;
-
+        position: fixed; //iphone error fix
+        top: 1%; //iphone error fix
+        left: 0; //iphone error fix
     }
 }
 .dialogImg{
