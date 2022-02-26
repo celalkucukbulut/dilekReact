@@ -8,6 +8,7 @@ const Header = () => {
     const handleCloseMenu = () => {
       handleMenu(false);
     };
+    
     const handleStateChange = (state) => {
       handleMenu(state.isOpen);
     };
