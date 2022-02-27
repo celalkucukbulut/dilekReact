@@ -16,7 +16,7 @@ const ProductImage = (props) => {
             <label className='productImageLabel'>{props.label}</label>
             {isOpen && (
                 <OutsideArea runFunction={() => setOpen(!isOpen)}>
-                    <ModalDialog  className="dialogProduct" show={true} onClick={() => setOpen(!isOpen)}>
+                    <ModalDialog  className="dialogProduct" show="true" onClick={() => setOpen(!isOpen)}>
                         <img
                             className='dialogImg'
                             onClick={() => setOpen(!isOpen)}
