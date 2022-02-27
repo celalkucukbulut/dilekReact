@@ -1,6 +1,7 @@
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import OutsideArea from './OutsideArea';
+import { ModalDialog  } from 'react-bootstrap';
 
 const ProductImage = (props) => {
     const [isOpen, setOpen] = useState(false);
@@ -15,17 +16,14 @@ const ProductImage = (props) => {
             <label className='productImageLabel'>{props.label}</label>
             {isOpen && (
                 <OutsideArea runFunction={() => setOpen(!isOpen)}>
-                    <dialog
-                        className="dialogProduct"
-                        onClick={() => setOpen(!isOpen)}
-                    >
+                    <ModalDialog  className="dialogProduct" show={true} onClick={() => setOpen(!isOpen)}>
                         <img
                             className='dialogImg'
                             onClick={() => setOpen(!isOpen)}
                             alt='dilek_fanila'
                             src={props.url}
                         />
-                    </dialog>
+                    </ModalDialog>
                 </OutsideArea>
             )}
         </div>

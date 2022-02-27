@@ -20,24 +20,32 @@
 
 .dialogProduct{
     position: fixed;
+    border: 2;
+    border-style: solid;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
     top: 5%;
-    left: 0;
+    left: 30%;
     width: 40vw;
     height: 90vh;
     display: flex;
     justify-content: center;
-    cursor: pointer;
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 700px) {
+        top: 5%;
+        left: 15%;
         width: 70vw;
+        height: 90vh;
     }
     @media screen and (max-width: 500px) {
-        height: 90vw;
-        position: fixed; //iphone error fix
-        top: 1%; //iphone error fix
-        left: 0; //iphone error fix
+        width: 70vw;
+        left: 15%;
+        top: 15%;
+        height: 70vh;
     }
 }
 .dialogImg{
     width: 100%;
+    cursor: pointer;
     height: 100%;
 }
