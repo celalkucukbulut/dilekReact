@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from '../Title';
 import Text from '../Text';
 const AboutUs = () => {
     const subtitle1 = "DENEME BAŞLIK";

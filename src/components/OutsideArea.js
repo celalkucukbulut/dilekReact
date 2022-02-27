@@ -12,7 +12,7 @@ const useOutside = (ref,runFunction) => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [ref]);
+    }, [ref,runFunction]);
 }
 
 const OutsideArea = (props) => {
