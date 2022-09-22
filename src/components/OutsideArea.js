@@ -7,7 +7,6 @@ const useOutside = (ref,runFunction) => {
                 runFunction();
             }
         }
-
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -18,7 +17,6 @@ const useOutside = (ref,runFunction) => {
 const OutsideArea = (props) => {
     const wrapperRef = useRef(null);
     useOutside(wrapperRef,props.runFunction);
-
     return <div ref={wrapperRef}>{props.children}</div>;
 }
 export default OutsideArea

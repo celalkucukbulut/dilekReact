@@ -1,23 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import db from '../../firebase/firebase';
+import { onSnapshot,doc } from 'firebase/firestore';
 import Text from '../Text';
 import ProductImage from '../ProductImage';
 
+//#region import images
 import allColors from '../../Images/allColors.jpg';
 import zeroWomenBlue1 from '../../Images/zero-women-blue-1.jpg';
 import halfWomen from '../../Images/half-women.jpg';
 
+//#endregion
+
+
 const Products = () => {
-    const subtitle1 = "DENEME BAŞLIK";
-    const text1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-    obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-    nihil, eveniet aliquid culpa officia aut! `;
+    
+    const [productsText ,setProductsText] = useState('')
+    const [productsTitle,setProductsTitle] = useState('')
+    useEffect(() => 
+        onSnapshot(doc(db, "dilekdb", "products"), (doc) => {
+            setProductsText(doc.data().productsText)
+            setProductsTitle(doc.data().productsTitle)
+        }), [])
+
     return (
         <div className='page'>
             <div className='content'>
-                <Text subtitle={subtitle1} text={text1}></Text>
+                <Text subtitle={productsTitle} text={productsText}></Text>
             </div>
             <div className='content'>
                 <label>KADIN</label>

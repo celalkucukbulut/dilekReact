@@ -1,17 +1,25 @@
-import React, { useRef, useState } from 'react';
-import emailjs from 'emailjs-com'
+import React, { useEffect, useRef, useState } from 'react';
+import db from '../firebase/firebase';import emailjs from 'emailjs-com';
+import { onSnapshot,doc } from 'firebase/firestore';
 
 const Email = () => {
     const form = useRef();
-    const [resultMessage, setResultMessage] = useState('');
+    const [resultMessage, setResultMessage] = useState('')
+    const [successMsg ,setSuccessMsg] = useState('')
+        const [errorMsg,setErrorMsg] = useState('')
+        useEffect(() => 
+            onSnapshot(doc(db, "dilekdb", "email"), (doc) => {
+                setSuccessMsg(doc.data().successMsg)
+                setErrorMsg(doc.data().errorMsg)
+            }), [])
+
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAIL_USER_ID)
             .then((result) => {
-                setResultMessage('Mesajınız başarıyla iletildi.');
+                setResultMessage(successMsg);
             }, (error) => {
-                setResultMessage('Mesajınız iletilemedi. Lütfen telefon ile arayınız.');
+                setResultMessage(errorMsg);
             });
         form.current.reset();
     };
@@ -25,7 +33,7 @@ const Email = () => {
                         <input type="text" className="form-control" name="from_name" />
                     </div>
                     <div className="form-group col-lg-4">
-                        <label>eMail Adresi</label>
+                        <label>E-Mail Adresi</label>
                         <input type="email" className="form-control" placeholder="kisi@abc.com" name="reply_to" />
                     </div>
                     <div className="form-group col-lg-4">

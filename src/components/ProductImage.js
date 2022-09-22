@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import OutsideArea from './OutsideArea';
 import { ModalDialog  } from 'react-bootstrap';
 
