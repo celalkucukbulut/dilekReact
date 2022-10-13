@@ -1,4 +1,8 @@
 .product{
-    display: inline-flex;
+    display: flex;
     background-color: rgba(235, 255, 255,0.75);
 }
+.product>div {
+    flex: 1; 
+    text-align: center;
+  }
