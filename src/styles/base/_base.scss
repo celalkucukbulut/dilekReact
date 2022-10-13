@@ -5,11 +5,12 @@
 html{
     font-size: 62.5%;
     margin-top: 0;
+    height: 100%;
 }
 
 body {
-    background: url('/Images/background.jpg');
-    background-size:cover;
+    background: url('/Images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: $m-size;
     line-height: 1.6;
@@ -25,4 +26,11 @@ body {
     padding: 2rem;
     margin-top: 1rem;
 
+}
+
+.link {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    
 }

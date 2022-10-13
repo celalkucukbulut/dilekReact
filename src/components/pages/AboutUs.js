@@ -20,8 +20,8 @@ const AboutUs = () => {
         <div className='page'>
             <div className='content'>
                 <Text subtitle={aboutUsTitle} text={aboutUsText}></Text>       
-                <a href={link1}>{link1}</a><br></br>
-                <a href={link2}>{link2}</a><br></br>
+                <a class="link" rel="noopener noreferrer" target="_blank" href={link1}>Fanila, benim sayemde tanındı</a><br></br>
+                <a class="link" rel="noopener noreferrer" target="_blank" href={link2}>Uluslararası festivalde Kastamonu’yu tanıtacaklar</a><br></br>
             </div>
         </div>
     )

@@ -27,9 +27,9 @@ const ContactUs = () => {
         <div className='page'>
             <div className='content'>
                 <Text subtitle={contactUsTitle} text={contactUsText}></Text>
-                <h3><strong>Telefon : </strong> {phone}</h3>
-                <h3><strong>Adres : </strong>{address}</h3>
-                <h3><strong>Email : </strong>{email}</h3>
+                {phone ? <h3><strong>Telefon : </strong> {phone}</h3> : null}
+                {address ? <h3><strong>Adres : </strong>{address}</h3> : null}
+                {email ? <h3><strong>Email : </strong>{email}</h3> : null}
             </div>
             <div style={{ padding: "10px" }}>
                 <Iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={googlePin}></Iframe>

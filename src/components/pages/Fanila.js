@@ -17,7 +17,7 @@ const Fanila = () => {
         <div className='page'>
             <div className='content'>
                 <Text subtitle={fanilaTitle} text={fanilaText}></Text>
-                <a href={link1}>{link1}</a><br></br>
+                <a class="link" rel="noopener noreferrer" target="_blank" href={link1}>Fanilacılık</a><br></br>
             </div>
         </div>
     )

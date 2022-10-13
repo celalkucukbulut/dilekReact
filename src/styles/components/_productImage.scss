@@ -25,23 +25,23 @@
     padding: 5px;
     margin: 5px;
     background-color: white;
-    top: 5%;
+    top: 10%;
     left: 30%;
     width: 40vw;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     @media screen and (max-width: 700px) {
-        top: 5%;
+        top: 10%;
         left: 15%;
         width: 70vw;
-        height: 90vh;
+        height: 80vh;
     }
     @media screen and (max-width: 500px) {
-        width: 70vw;
+        top: 20%;
         left: 15%;
-        top: 15%;
-        height: 70vh;
+        width: 70vw;
+        height: 60vh;
     }
 }
 .dialogImg{

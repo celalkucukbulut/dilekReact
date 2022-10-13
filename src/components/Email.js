@@ -34,7 +34,7 @@ const Email = () => {
                     </div>
                     <div className="form-group col-lg-4">
                         <label>E-Mail Adresi</label>
-                        <input type="email" className="form-control" placeholder="kisi@abc.com" name="reply_to" />
+                        <input type="email" className="form-control" placeholder="kisi@email.com" name="reply_to" />
                     </div>
                     <div className="form-group col-lg-4">
                         <label>Telefon Numarası</label>
