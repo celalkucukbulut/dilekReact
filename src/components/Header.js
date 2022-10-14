@@ -27,12 +27,6 @@ const Header = () => {
                 <NavLink className="navlink" to='/Fanila' activestyle="true">
                     KASTAMONU FANİLASI
                 </NavLink>
-                <NavLink className="navlink" to='/Products' activestyle="true">
-                    ÜRÜNLERİMİZ
-                </NavLink>
-                <NavLink className="navlink" to='/ContactUs' activestyle="true">
-                    İLETİŞİM
-                </NavLink>
             </div>
             <OutsideArea runFunction={() => handleCloseMenu()}>
                 <div className='navburger'>
@@ -51,12 +45,6 @@ const Header = () => {
                             </NavLink>
                             <NavLink className="navlink" to='/Fanila' activestyle="true" onClick={() => handleCloseMenu()}>
                                 KASTAMONU FANİLASI
-                            </NavLink>
-                            <NavLink className="navlink" to='/Products' activestyle="true" onClick={() => handleCloseMenu()}>
-                                ÜRÜNLERİMİZ
-                            </NavLink>
-                            <NavLink className="navlink" to='/ContactUs' activestyle="true" onClick={() => handleCloseMenu()}>
-                                İLETİŞİM
                             </NavLink>
                         </div>
                     </Menu>

@@ -12,6 +12,7 @@ const ContactUs = () => {
     const [address,setAddress] = useState('')
     const [email,setEmail] = useState('')
     const [googlePin,setGooglePin] = useState('')
+    const [showMessage,setShowMessage] = useState('')
 
     useEffect(() => 
         onSnapshot(doc(db, "dilekdb", "contactUs"), (doc) => {
@@ -21,20 +22,21 @@ const ContactUs = () => {
             setAddress(doc.data().address)
             setEmail(doc.data().email)
             setGooglePin(doc.data().googlePin)
+            setShowMessage(doc.data().showMessage)
         }), [])
 
     return (
-        <div className='page'>
+        <div>
             <div className='content'>
                 <Text subtitle={contactUsTitle} text={contactUsText}></Text>
                 {phone ? <h3><strong>Telefon : </strong> {phone}</h3> : null}
                 {address ? <h3><strong>Adres : </strong>{address}</h3> : null}
                 {email ? <h3><strong>Email : </strong>{email}</h3> : null}
+                {googlePin ? <div style={{ padding: "10px" }}>
+                    <Iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={googlePin}></Iframe>
+                </div> : null}
+                {showMessage ? <Email></Email> : null }
             </div>
-            <div style={{ padding: "10px" }}>
-                <Iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={googlePin}></Iframe>
-            </div>
-            <Email></Email>
         </div>
     )
 };

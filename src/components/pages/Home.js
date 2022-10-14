@@ -1,24 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import db from '../../firebase/firebase';
-import Slider from '../Slider';
-import Text from '../Text';
-import { onSnapshot,doc } from 'firebase/firestore';
+import React from 'react'
+import Products from './Products';
+import ContactUs from './ContactUs';
 
 const Home = () => {
-    const [homeText,setHomeText] = useState('')
-    const [homeTitle,setHomeTitle] = useState('')
-    useEffect(() => 
-        onSnapshot(doc(db, "dilekdb", "home"), (doc) => {
-            setHomeText(doc.data().homeText)
-            setHomeTitle(doc.data().homeTitle)
-        }), [])
     return (
         <div className='page'>
-
-            <Slider></Slider>
-            <div className='content'>
-                <Text subtitle={homeTitle} text={homeText}></Text>
-            </div>
+            <Products></Products>
+            <ContactUs></ContactUs>
         </div>
     )
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import db from '../../firebase/firebase';
-import { onSnapshot,doc } from 'firebase/firestore';
+import { onSnapshot, doc } from 'firebase/firestore';
 import Text from '../Text';
 import ProductImage from '../ProductImage';
 
@@ -22,23 +22,23 @@ import image_301 from '../../Images/301.jpg';
 import image_302 from '../../Images/302.jpg';
 
 //#endregion
-
-
 const Products = () => {
-    
-    const [productsText ,setProductsText] = useState('')
-    const [productsTitle,setProductsTitle] = useState('')
-    useEffect(() => 
+
+    const [productsText, setProductsText] = useState('')
+    const [productsTitle, setProductsTitle] = useState('')
+    useEffect(() =>
         onSnapshot(doc(db, "dilekdb", "products"), (doc) => {
             setProductsText(doc.data().productsText)
             setProductsTitle(doc.data().productsTitle)
         }), [])
 
     return (
-        <div className='page'>
-            <div className='content'>
-                <Text subtitle={productsTitle} text={productsText}></Text>
-            </div>
+        <div>
+            {productsTitle || productsText ?
+                <div className='content'>
+                    <Text subtitle={productsTitle} text={productsText}></Text>
+                </div>
+                : null}
             <div className='content'>
                 <label>KADIN</label>
             </div>

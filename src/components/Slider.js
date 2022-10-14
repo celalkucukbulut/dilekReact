@@ -11,11 +11,11 @@ import slider3 from '../Images/slider3.jpg';
 
 const images = [
     {
-        original: slider2,
+        original: slider1,
         originalHeight: 300,
     },
     {
-        original: slider1,
+        original: slider2,
         originalHeight: 300,
     },
     {
@@ -30,8 +30,11 @@ const Slider = () => {
         <ImageGallery
             showPlayButton={false}
             showFullscreenButton={false}
+            showNav={false}
             slideDuration={400}
-            slideInterval={8000}
+            slideInterval={10000}
+            autoPlay = {true}
+            isRTL = {true}
             items={images} />
     )
 };
