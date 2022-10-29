@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /AboutUs
+Allow: /ContactUs
+Allow: /ContactUs
+Allow: /Fanila
+Allow: /Home
+Allow: /Products
