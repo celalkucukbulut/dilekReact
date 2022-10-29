@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dilekreact"
+  },
+  "targets": {
+    "dilekreact": {
+      "hosting": {
+        "dilekreact": [
+          "dilekreact"
+        ]
+      }
+    }
+  }
+}
