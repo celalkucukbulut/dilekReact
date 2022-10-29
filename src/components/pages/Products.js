@@ -43,14 +43,14 @@ const Products = () => {
                 <label>KADIN</label>
             </div>
             <div className='product'>
-                <ProductImage url={image_101B} label="101"></ProductImage>
-                <ProductImage url={image_101K} label="101"></ProductImage>
-                <ProductImage url={image_101S} label="101"></ProductImage>
+                <ProductImage url={image_101B} label="101 Beyaz"></ProductImage>
+                <ProductImage url={image_101K} label="101 Kırmızı"></ProductImage>
+                <ProductImage url={image_101S} label="101 Siyah"></ProductImage>
             </div>
             <div className='product'>
                 <ProductImage url={image_102} label="102"></ProductImage>
-                <ProductImage url={image_103B} label="103"></ProductImage>
-                <ProductImage url={image_103S} label="103"></ProductImage>
+                <ProductImage url={image_103B} label="103 Beyaz"></ProductImage>
+                <ProductImage url={image_103S} label="103 Siyah"></ProductImage>
             </div>
             <div className='product'>
                 <ProductImage url={image_104} label="104"></ProductImage>
@@ -64,9 +64,6 @@ const Products = () => {
                 <ProductImage url={image_201} label="201"></ProductImage>
                 <ProductImage url={image_211} label="211"></ProductImage>
                 <ProductImage url={image_221} label="221"></ProductImage>
-            </div>
-            <div className='content'>
-                <label>DİĞER</label>
             </div>
             <div className='product'>
                 <ProductImage url={image_301} label="301"></ProductImage>
