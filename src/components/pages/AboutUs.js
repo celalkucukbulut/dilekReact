@@ -5,10 +5,11 @@ import Text from '../Text';
 import Slider from '../Slider';
 import ProductImage from '../ProductImage';
 
-//#region  import images
-import image_1 from '../../Images/1.jpg';
-import image_2 from '../../Images/2.jpg';
-import image_3 from '../../Images/3.jpg';
+
+import isaret from '../../Images/isaret.jpg';
+import isaretTescil from '../../Images/isaretTescil.jpg';
+import megep from '../../Images/megep.jpg';
+import dilekFanilaVideo from '../../Videos/dilekFanilaVideo.MP4';
 
 //#endregion
 
@@ -29,16 +30,21 @@ const AboutUs = () => {
 
     return (
         <div className='page'>
+            <div>
+                <video className='video' controls >
+                <source src={dilekFanilaVideo} type="video/mp4"/>
+            </video>
+            </div>
             {showSlider ? <Slider></Slider> : null}
             <div className='content'>
                 <Text subtitle={aboutUsTitle} text={aboutUsText}></Text>
-                {link1 ? <div><a class="link" rel="noopener noreferrer" target="_blank" href={link1}>Fanila, benim sayemde tanındı</a><br></br></div> : null}
-                {link2 ? <div><a class="link" rel="noopener noreferrer" target="_blank" href={link2}>Uluslararası festivalde Kastamonu’yu tanıtacaklar</a><br></br></div> : null}
+                {link1 ? <div><a class="link" rel="noopener noreferrer" target="_blank" href={link1}>{link1}</a><br></br></div> : null}
+                {link2 ? <div><a class="link" rel="noopener noreferrer" target="_blank" href={link2}>{link2}</a><br></br></div> : null}
             </div>
             <div className='product'>
-                <ProductImage url={image_1} label=""></ProductImage>
-                <ProductImage url={image_3} label=""></ProductImage>
-                <ProductImage url={image_2} label=""></ProductImage>
+                <ProductImage url={isaretTescil} label=""></ProductImage>
+                <ProductImage url={megep} label=""></ProductImage>
+                <ProductImage url={isaret} label=""></ProductImage>
             </div>
         </div>
     )

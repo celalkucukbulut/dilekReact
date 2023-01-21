@@ -4,22 +4,19 @@ import ImageGallery from 'react-image-gallery';
 //#region   import images
 
 import slider1 from '../Images/slider1.jpg';
-import slider2 from '../Images/slider2.jpg';
-import slider3 from '../Images/slider3.jpg';
-
+import dilekFanila from '../Images/dilekFanila.jpg';
+import ihsangazi from '../Images/ihsangazi.jpg';
 //#endregion
 
 const images = [
     {
         original: slider1,
         originalHeight: 300,
-    },
-    {
-        original: slider2,
+    },{
+        original: dilekFanila,
         originalHeight: 300,
-    },
-    {
-        original: slider3,
+    },{
+        original: ihsangazi,
         originalHeight: 300,
     }
 ];
@@ -34,7 +31,7 @@ const Slider = () => {
             slideDuration={400}
             slideInterval={10000}
             autoPlay = {true}
-            isRTL = {true}
+            isRTL = {false}
             items={images} />
     )
 };
