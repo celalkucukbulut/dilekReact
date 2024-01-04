@@ -28,23 +28,38 @@ import image_221 from '../../Images/221.jpg';
 import image_241 from '../../Images/241.jpg';
 import image_301 from '../../Images/301.jpg';
 import image_302 from '../../Images/302.jpg';
+import instagramImage from '../../Images/instagram.png';
 
 //#endregion
 const Products = () => {
 
     const [productsText, setProductsText] = useState('')
     const [productsTitle, setProductsTitle] = useState('')
+    const [instagram, setInstagram] = useState('')
+    const [instagramText, setInstagramText] = useState('')
+
     useEffect(() =>
         onSnapshot(doc(db, "dilekdb", "products"), (doc) => {
             setProductsText(doc.data().productsText)
             setProductsTitle(doc.data().productsTitle)
         }), [])
-
+    useEffect(() =>
+        onSnapshot(doc(db, "dilekdb", "contactUs"), (doc) => {
+            setInstagram(doc.data().instagram)
+            setInstagramText(doc.data().instagramText)
+        }), [])
     return (
         <div>
             {productsTitle || productsText ?
                 <div className='content'>
                     <Text subtitle={productsTitle} text={productsText}></Text>
+                    {instagram ? <div>
+                        <a class="link" rel="noopener noreferrer" target="_blank" href={instagram}><img className='instagramImage'
+                            alt='instagram'
+                            src={instagramImage}
+                        /> {instagramText} </a></div> : null
+                    }
+
                 </div>
                 : null}
             <div className='content'>
