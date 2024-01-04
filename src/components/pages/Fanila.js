@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import db from '../../firebase/firebase';
 import Text from '../Text';
-import { onSnapshot,doc,collection } from 'firebase/firestore';
+import { onSnapshot,doc } from 'firebase/firestore';
 
 const Fanila = () => {
     const [fanilaText,setFanilaText] = useState('')

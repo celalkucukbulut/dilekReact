@@ -1,1 +1,1 @@
-kastamonufanilasi.com
+www.kastamonufanilasi.com
