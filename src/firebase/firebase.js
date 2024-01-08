@@ -12,5 +12,5 @@ const firebaseConfig = {
   databaseURL : process.env.REACT_APP_FIREBASE_DATABASE_URL
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 export default getFirestore();
