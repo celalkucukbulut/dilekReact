@@ -1,10 +1,10 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import "../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
-@import './base/settings';
-@import './base/base';
-@import './components/loader';
-@import './components/navbar';
-@import './components/title';
-@import './components/text';
+@import './base/settings.scss';
+@import './base/base.scss';
+@import './components/loader.scss';
+@import './components/navbar.scss';
+@import './components/title.scss';
+@import './components/text.scss';
 @import './components/product.scss';
 @import './components/productImage.scss';
