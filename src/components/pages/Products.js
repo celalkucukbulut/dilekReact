@@ -54,7 +54,7 @@ const Products = () => {
                 <div className='content'>
                     <Text subtitle={productsTitle} text={productsText}></Text>
                     {instagram ? <div>
-                        <a class="link" rel="noopener noreferrer" target="_blank" href={instagram}><img className='instagramImage'
+                        <a className="link" rel="noopener noreferrer" target="_blank" href={instagram}><img className='instagramImage'
                             alt='instagram'
                             src={instagramImage}
                         /> {instagramText} </a></div> : null

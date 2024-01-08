@@ -38,8 +38,8 @@ const AboutUs = () => {
             {showSlider ? <Slider></Slider> : null}
             <div className='content'>
                 <Text subtitle={aboutUsTitle} text={aboutUsText}></Text>
-                {link1 ? <div><a class="link" rel="noopener noreferrer" target="_blank" href={link1}>{link1}</a><br></br></div> : null}
-                {link2 ? <div><a class="link" rel="noopener noreferrer" target="_blank" href={link2}>{link2}</a><br></br></div> : null}
+                {link1 ? <div><a className="link" rel="noopener noreferrer" target="_blank" href={link1}>{link1}</a><br></br></div> : null}
+                {link2 ? <div><a className="link" rel="noopener noreferrer" target="_blank" href={link2}>{link2}</a><br></br></div> : null}
             </div>
             <div className='product'>
                 <ProductImage url={isaretTescil} label=""></ProductImage>

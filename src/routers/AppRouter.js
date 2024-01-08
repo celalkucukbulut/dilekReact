@@ -4,6 +4,8 @@ import Home from '../components/pages/Home';
 import AboutUs from '../components/pages/AboutUs';
 import Fanila from '../components/pages/Fanila';
 import Header from '../components/Header';
+import NotFound from '../components/NotFound';
+
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -13,7 +15,7 @@ const AppRouter = () => (
             <Route path="/Home" element={<Home />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/Fanila" element={<Fanila />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     </BrowserRouter>
 );
