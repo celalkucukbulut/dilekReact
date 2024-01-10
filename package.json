@@ -35,7 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy --no-strict --only hosting:dilekreact"
+    "deploy": "firebase deploy --only hosting:dilekreact"
   },
   "eslintConfig": {
     "extends": [
