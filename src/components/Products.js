@@ -1,69 +1,55 @@
-import React, { useEffect, useState } from 'react'
-import db from '../../firebase/firebase';
+import React, { useEffect, useState } from 'react';
+import db from '../firebase/firebase';
 import { onSnapshot, doc } from 'firebase/firestore';
-import Text from '../Text';
-import ProductImage from '../ProductImage';
+import Text from './Utils/Text';
+import ProductImage from './Utils/ProductImage';
 
 //#region import images
 
-import image_101 from '../../Images/101.jpg';
-import image_102 from '../../Images/102.jpg';
-import image_103 from '../../Images/103.jpg';
-import image_104 from '../../Images/104.jpg';
-import image_105 from '../../Images/105.jpg';
-import image_106 from '../../Images/106.jpg';
-import image_107 from '../../Images/107.jpg';
-import image_108 from '../../Images/108.jpg';
-import image_109 from '../../Images/109.jpg';
-import image_110 from '../../Images/110.jpg';
-import image_111 from '../../Images/111.jpg';
-import image_112 from '../../Images/112.jpg';
-import image_113 from '../../Images/113.jpg';
-import image_114 from '../../Images/114.jpg';
-import image_115 from '../../Images/115.jpg';
-import image_121 from '../../Images/121.jpg';
-import image_141 from '../../Images/141.jpg';
-import image_201 from '../../Images/201.jpg';
-import image_221 from '../../Images/221.jpg';
-import image_241 from '../../Images/241.jpg';
-import image_301 from '../../Images/301.jpg';
-import image_302 from '../../Images/302.jpg';
-import instagramImage from '../../Images/instagram.png';
+import image_101 from '../Images/101.jpg';
+import image_102 from '../Images/102.jpg';
+import image_103 from '../Images/103.jpg';
+import image_104 from '../Images/104.jpg';
+import image_105 from '../Images/105.jpg';
+import image_106 from '../Images/106.jpg';
+import image_107 from '../Images/107.jpg';
+import image_108 from '../Images/108.jpg';
+import image_109 from '../Images/109.jpg';
+import image_110 from '../Images/110.jpg';
+import image_111 from '../Images/111.jpg';
+import image_112 from '../Images/112.jpg';
+import image_113 from '../Images/113.jpg';
+import image_114 from '../Images/114.jpg';
+import image_115 from '../Images/115.jpg';
+import image_121 from '../Images/121.jpg';
+import image_141 from '../Images/141.jpg';
+import image_201 from '../Images/201.jpg';
+import image_221 from '../Images/221.jpg';
+import image_241 from '../Images/241.jpg';
+import image_301 from '../Images/301.jpg';
+import image_302 from '../Images/302.jpg';
 
 //#endregion
 const Products = () => {
 
     const [productsText, setProductsText] = useState('')
     const [productsTitle, setProductsTitle] = useState('')
-    const [instagram, setInstagram] = useState('')
-    const [instagramText, setInstagramText] = useState('')
 
     useEffect(() =>
         onSnapshot(doc(db, "dilekdb", "products"), (doc) => {
             setProductsText(doc.data().productsText)
             setProductsTitle(doc.data().productsTitle)
         }), [])
-    useEffect(() =>
-        onSnapshot(doc(db, "dilekdb", "contactUs"), (doc) => {
-            setInstagram(doc.data().instagram)
-            setInstagramText(doc.data().instagramText)
-        }), [])
     return (
-        <div>
+        <div className='content'>
             {productsTitle || productsText ?
-                <div className='content'>
+                <div>
                     <Text subtitle={productsTitle} text={productsText}></Text>
-                    {instagram ? <div>
-                        <a className="link" rel="noopener noreferrer" target="_blank" href={instagram}><img className='instagramImage'
-                            alt='instagram'
-                            src={instagramImage}
-                        /> {instagramText} </a></div> : null
-                    }
-
                 </div>
-                : null}
+                : null
+            }
             <div className='content'>
-                <label>KADIN</label>
+                <h2>KADIN</h2>
             </div>
             <div className='product'>
                 <ProductImage url={image_101} label="101"></ProductImage>
@@ -95,7 +81,7 @@ const Products = () => {
                 <ProductImage url={image_141} label="141"></ProductImage>
             </div>
             <div className='content'>
-                <label>ERKEK</label>
+                <h2>ERKEK</h2>
             </div>
             <div className='product'>
                 <ProductImage url={image_201} label="201"></ProductImage>

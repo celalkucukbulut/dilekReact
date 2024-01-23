@@ -4,7 +4,7 @@ import Home from '../components/pages/Home';
 import AboutUs from '../components/pages/AboutUs';
 import Fanila from '../components/pages/Fanila';
 import Header from '../components/Header';
-import NotFound from '../components/NotFound';
+import NotFound from '../components/pages/NotFound';
 
 
 const AppRouter = () => (

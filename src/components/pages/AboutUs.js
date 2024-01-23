@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import db from '../../firebase/firebase';
 import { onSnapshot, doc } from 'firebase/firestore';
-import Text from '../Text';
-import Slider from '../Slider';
-import ProductImage from '../ProductImage';
+import Text from '../Utils/Text';
+import Slider from '../Utils/Slider';
+import ProductImage from '../Utils/ProductImage';
 
 
 import isaret from '../../Images/isaret.jpg';

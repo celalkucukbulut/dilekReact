@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
       <loc>https://kastamonufanilasi.com</loc>
@@ -6,15 +7,9 @@
       <loc>https://kastamonufanilasi.com/AboutUs</loc>
   </url>
   <url>
-      <loc>https://kastamonufanilasi.com/ContactUs</loc>
-  </url>
-  <url>
       <loc>https://kastamonufanilasi.com/Fanila</loc>
   </url>
   <url>
       <loc>https://kastamonufanilasi.com/Home</loc>
-  </url>
-  <url>
-      <loc>https://kastamonufanilasi.com/Products</loc>
   </url>
 </urlset>

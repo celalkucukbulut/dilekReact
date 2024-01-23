@@ -1,7 +1,7 @@
 import React,{ useState }  from 'react';
 import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu'
-import OutsideArea from './OutsideArea';
+import OutsideArea from './Utils/OutsideArea';
 
 const Header = () => {
     const [isMenuOpen, handleMenu] = useState(false);

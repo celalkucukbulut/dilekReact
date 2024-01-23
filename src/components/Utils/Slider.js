@@ -3,9 +3,9 @@ import ImageGallery from 'react-image-gallery';
 
 //#region   import images
 
-import slider1 from '../Images/slider1.jpg';
-import dilekFanila from '../Images/dilekFanila.jpg';
-import ihsangazi from '../Images/ihsangazi.jpg';
+import slider1 from '../../Images/slider1.jpg';
+import dilekFanila from '../../Images/dilekFanila.jpg';
+import ihsangazi from '../../Images/ihsangazi.jpg';
 //#endregion
 
 const images = [

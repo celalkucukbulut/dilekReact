@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import db from '../../firebase/firebase';
+import db from '../firebase/firebase';
 import { onSnapshot,doc } from 'firebase/firestore';
-import Text from '../Text';
+import Text from './Utils/Text';
 import Iframe from 'react-iframe';
-import Email from '../Email';
+import Email from './Email';
 
 const ContactUs = () => {
     const [contactUsText, setContactUsText] = useState('')

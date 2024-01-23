@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import db from '../firebase/firebase';import emailjs from 'emailjs-com';
+import { React, useEffect, useRef, useState } from 'react';
+import db from '../firebase/firebase';
+import emailjs from 'emailjs-com';
 import { onSnapshot,doc } from 'firebase/firestore';
 
 const Email = () => {

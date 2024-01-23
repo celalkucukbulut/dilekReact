@@ -13,7 +13,7 @@ const ProductImage = (props) => {
                     onClick={() => setOpen(!isOpen)}
                     alt='dilek_fanila'
                     src={props.url} />
-                <label className='productImageLabel'>{props.label}</label>
+                <h3 className='productImageLabel'>{props.label}</h3>
             </div>
             {isOpen && (
                 <OutsideArea runFunction={() => setOpen(!isOpen)}>

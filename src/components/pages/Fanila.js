@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import db from '../../firebase/firebase';
-import Text from '../Text';
+import Text from '../Utils/Text';
 import { onSnapshot,doc } from 'firebase/firestore';
 
 const Fanila = () => {
