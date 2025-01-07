@@ -63,7 +63,6 @@ const Products = () => {
                       acc[id] = url;
                       return acc;
                   }, {});
-                  console.log(imageMap)
                   setProductImages(imageMap);
               } catch (error) {
                   console.error("Error fetching images:", error);
