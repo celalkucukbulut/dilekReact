@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -12,5 +11,4 @@ const firebaseConfig = {
   databaseURL : process.env.REACT_APP_FIREBASE_DATABASE_URL
 };
 
-initializeApp(firebaseConfig);
-export default getFirestore();
+export default initializeApp(firebaseConfig);

@@ -11,7 +11,7 @@ const ProductImage = (props) => {
                 <img
                     className='img'
                     onClick={() => setOpen(!isOpen)}
-                    alt='dilek_fanila'
+                    alt={props.label}
                     src={props.url} />
                 <h3 className='productImageLabel'>{props.label}</h3>
             </div>
@@ -21,7 +21,7 @@ const ProductImage = (props) => {
                         <img
                             className='dialogImg'
                             onClick={() => setOpen(!isOpen)}
-                            alt='dilek_fanila'
+                            alt={props.label}
                             src={props.url}
                         />
                     </ModalDialog>

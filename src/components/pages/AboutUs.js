@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import db from '../../firebase/firebase';
+import db from '../../firebase/firestore';
+import storage from '../../firebase/storage';
 import { onSnapshot, doc } from 'firebase/firestore';
+import { ref, getDownloadURL } from 'firebase/storage';
 import Text from '../Utils/Text';
 import Slider from '../Utils/Slider';
 import ProductImage from '../Utils/ProductImage';
 
-
 import isaret from '../../Images/isaret.jpg';
 import isaretTescil from '../../Images/isaretTescil.jpg';
 import megep from '../../Images/megep.jpg';
-import dilekFanilaVideo from '../../Videos/dilekFanilaVideo.MP4';
 
 //#endregion
 
@@ -19,6 +19,32 @@ const AboutUs = () => {
     const [link1, setLink1] = useState('')
     const [link2, setLink2] = useState('')
     const [showSlider, setShowSlider] = useState('')
+    const [dilekFanilaVideoUrl, setDilekFanilaVideoUrl] = useState('');
+    
+    const fetchVideoUrl = async (path) => {
+        try {
+          const videoRef = ref(storage, path);
+          const url = await getDownloadURL(videoRef);
+          return url;
+        } catch (error) {
+          console.error('Error fetching image URL:', error);
+        }
+      };
+      
+      useEffect(() => {
+        const fetchVideo = async () => {
+            try {
+                const videoUrl = await fetchVideoUrl('dilekVideos/dilekFanilaVideo.MP4');
+                setDilekFanilaVideoUrl(videoUrl);
+            } catch (error) {
+                console.error('Error fetching images:', error);
+            }
+        };
+    
+        fetchVideo();
+    }, []);
+
+
     useEffect(() =>
         onSnapshot(doc(db, "dilekdb", "aboutUs"), (doc) => {
             setAboutUsText(doc.data().aboutUsText)
@@ -30,11 +56,12 @@ const AboutUs = () => {
 
     return (
         <div className='page'>
-            <div>
-                <video className='video' controls >
-                <source src={dilekFanilaVideo} type="video/mp4"/>
-            </video>
-            </div>
+            {dilekFanilaVideoUrl ? 
+                <div>
+                    <video className='video' controls loading="lazy">
+                        <source src={dilekFanilaVideoUrl} type="video/mp4"/>
+                    </video>
+                </div> : null}
             {showSlider ? <Slider></Slider> : null}
             <div className='content'>
                 <Text subtitle={aboutUsTitle} text={aboutUsText}></Text>
